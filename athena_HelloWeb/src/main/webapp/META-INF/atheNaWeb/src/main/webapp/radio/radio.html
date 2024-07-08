@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>라디오 서블릿</title>
+	</head>
+	<body>
+		<h1>선택 정보를 입력해주세요.</h1>
+		<form action ="/RadioServlet" method="get">
+			<!-- 
+			- 선택한 결과 값은 value값으로 출력됨.
+			- 한글로 밸류값을 넣어도 상관 없으나, 서버를 왔다갔다할 때 깨질 수 있다. 
+			- 원칙은 영어로 보내는 것임!
+			 -->
+			성별 : 
+			남자 <input type = "radio" name = "gender" value = "남">
+			여자 <input type = "radio" name = "gender" value = "녀"> <br>
+			<!-- name 이하의 값을 같게 입력해야지만 전체 중 하나만 선택 가능 -->
+			메일정보 수신여부 : 
+			수신 <input type = "radio" name = "mail-check" value = "yes">
+			거부 <input type = "radio" name = "mail-check" value = "no"> <br>
+			<!-- name 이하의 값을 다르게 입력하면 서로 다른 선택지로 인식해서, 중복해서 선택 가능 -->
+			<input type = "submit" value = "전송">
+			거부
+		</form>
+	</body>
+</html>
